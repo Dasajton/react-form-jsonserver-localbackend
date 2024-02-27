@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { IEmployee } from "../interfaces";
 import axios from "axios";
 import * as config from "../config";
+import { FaSpinner } from "react-icons/fa";
 
 export const PageEmployees = () => {
 	const [employees, setEmployees] = useState<IEmployee[]>([]);
@@ -21,7 +22,7 @@ export const PageEmployees = () => {
 	return (
 		<>
 			{employees.length === 0 ? (
-				<p>Loading...</p>
+				<FaSpinner className="h-16 w-16 animate-spin" />
 			) : (
 				<p>There are {employees.length} Employees</p>
 			)}
