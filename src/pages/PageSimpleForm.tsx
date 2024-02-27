@@ -1,23 +1,37 @@
 import { FormEvent } from "react";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
+import { IEmployee } from "../interfaces";
+import * as config from "../config";
 
 export const PageSimpleForm = () => {
 	const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		const formData = new FormData(event.target as HTMLFormElement);
-		const employee = JSON.stringify(Object.fromEntries(formData));
+		const employee: IEmployee = Object.fromEntries(
+			formData
+		) as unknown as IEmployee;
+		employee.age = Number(employee.age);
 
 		(async () => {
 			const headers = {
 				"Access-Control-Allow-Origin": "*",
 				"Content-Type": "application/json",
 			};
-			const response = await axios.post(
-				"http://localhost:3011/employees",
-				employee,
-				{ headers }
-			);
-			console.log(response);
+			try {
+				const response: AxiosResponse = await axios.post(
+					`${config.getBackendUrl()}/employees`,
+					JSON.stringify(employee),
+					{ headers }
+				);
+
+				if (response.status === 201) {
+					// navigate("/employees");
+				} else {
+					console.log(`ERROR: ${response.status}`);
+				}
+			} catch (error: any) {
+				console.log(`ERROR: ${error.message}`);
+			}
 		})();
 	};
 
