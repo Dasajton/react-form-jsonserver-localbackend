@@ -9,7 +9,7 @@ export const PageSimpleForm = () => {
 
 	return (
 		<form onSubmit={handleFormSubmit}>
-			<fieldset className="border border-gray-500 p-4 w-full sm:w-40 rounded">
+			<fieldset className="w-full rounded border border-gray-500 p-4 sm:w-40">
 				<legend>New Employee</legend>
 
 				<div className="mb-4 flex gap-2">
@@ -69,7 +69,7 @@ export const PageSimpleForm = () => {
 				</div>
 
 				<div className="mt-5 flex justify-end pr-3">
-					<button className="bg-slate-500 hover:bg-slate-700 transition p-2 rounded">
+					<button className="rounded bg-slate-700 p-2 text-white transition hover:bg-slate-900">
 						Add Employee
 					</button>
 				</div>
