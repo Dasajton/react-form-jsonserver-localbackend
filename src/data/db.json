@@ -8,6 +8,24 @@
       "employeeNumber": "D-1194",
       "notes": "CEO",
       "id": 1
+    },
+    {
+      "firstName": "Steve",
+      "lastName": "Hennssen",
+      "age": 43,
+      "hireDate": "2024-02-20",
+      "employeeNumber": "S-2345",
+      "notes": "new CTO",
+      "id": 2
+    },
+    {
+      "firstName": "Steve",
+      "lastName": "Hendriks",
+      "age": 46,
+      "hireDate": "2024-02-26",
+      "employeeNumber": "S-9845",
+      "notes": "new HR Officer",
+      "id": 3
     }
   ]
 }
