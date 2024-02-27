@@ -1,3 +1,13 @@
 {
-  "employees": []
+  "employees": [
+    {
+      "firstName": "David",
+      "lastName": "Sajitz",
+      "age": "30",
+      "hireDate": "2024-02-27",
+      "employeeNumber": "D-1102",
+      "notes": "aa",
+      "id": 1
+    }
+  ]
 }
