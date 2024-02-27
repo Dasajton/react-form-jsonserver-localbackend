@@ -1,30 +1,13 @@
 {
   "employees": [
     {
-      "firstName": "James",
-      "lastName": "Tester",
-      "age": 55,
-      "hireDate": "2020-01-01",
-      "employeeNumber": "D-8811",
-      "id": 4
-    },
-    {
-      "firstName": "Erdem",
-      "lastName": "Dül",
+      "firstName": "David",
+      "lastName": "Sajitz",
       "age": 33,
-      "hireDate": "2024-02-27",
-      "employeeNumber": "S-2305",
-      "notes": "aaa",
-      "id": 5
-    },
-    {
-      "firstName": "Tim",
-      "lastName": "Fritz",
-      "age": 40,
-      "hireDate": "2024-02-15",
-      "employeeNumber": "S-7612",
-      "notes": "New Employee",
-      "id": 6
+      "hireDate": "2024-01-31",
+      "employeeNumber": "D-1194",
+      "notes": "CEO",
+      "id": 1
     }
   ]
 }
