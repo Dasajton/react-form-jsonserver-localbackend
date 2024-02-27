@@ -2,8 +2,10 @@ import { FormEvent } from "react";
 import axios, { AxiosResponse } from "axios";
 import { IEmployee } from "../interfaces";
 import * as config from "../config";
+import { useNavigate } from "react-router-dom";
 
 export const PageSimpleForm = () => {
+	const navigate = useNavigate();
 	const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		const formData = new FormData(event.target as HTMLFormElement);
@@ -25,7 +27,7 @@ export const PageSimpleForm = () => {
 				);
 
 				if (response.status === 201) {
-					// navigate("/employees");
+					navigate("/employees");
 				} else {
 					console.log(`ERROR: ${response.status}`);
 				}

@@ -16,6 +16,15 @@
       "employeeNumber": "S-2305",
       "notes": "aaa",
       "id": 5
+    },
+    {
+      "firstName": "Tim",
+      "lastName": "Fritz",
+      "age": 40,
+      "hireDate": "2024-02-15",
+      "employeeNumber": "S-7612",
+      "notes": "New Employee",
+      "id": 6
     }
   ]
 }
