@@ -1,10 +1,24 @@
 import { FormEvent } from "react";
+import axios from "axios";
 
 export const PageSimpleForm = () => {
 	const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		const data = new FormData(event.target as HTMLFormElement);
-		console.log(data);
+		const formData = new FormData(event.target as HTMLFormElement);
+		const employee = JSON.stringify(Object.fromEntries(formData));
+
+		(async () => {
+			const headers = {
+				"Access-Control-Allow-Origin": "*",
+				"Content-Type": "application/json",
+			};
+			const response = await axios.post(
+				"http://localhost:3011/employees",
+				employee,
+				{ headers }
+			);
+			console.log(response);
+		})();
 	};
 
 	return (
