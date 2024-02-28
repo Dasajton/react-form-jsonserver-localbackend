@@ -22,8 +22,10 @@ const router = createBrowserRouter([
 				path: "/simple-form",
 				element: (
 					<>
-						{config.getEnvironment() === "development" && (
+						{config.getEnvironment() === "development" ? (
 							<PageSimpleForm />
+						) : (
+							"No access"
 						)}
 					</>
 				),
